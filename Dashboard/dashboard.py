@@ -41,6 +41,24 @@ ax.set_title("Tren Penyewaan Sepeda")
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
+# **Pengaruh Weekday, Working Day, dan Holiday terhadap Penyewaan Sepeda**
+st.header("Pengaruh Weekday, Working Day, dan Holiday terhadap Penyewaan Sepeda 📅🚴‍♂️")
+
+# **1. Jumlah Penyewaan: Hari Kerja vs Akhir Pekan**
+fig, ax = plt.subplots(figsize=(8, 5))
+sns.barplot(x='workingday', y='cnt', data=filtered_data, estimator=sum, ci=None, ax=ax)
+ax.set_title("Jumlah Penyewaan Sepeda: Hari Kerja vs Akhir Pekan")
+ax.set_xlabel("Hari Kerja (0 = Libur, 1 = Kerja)")
+ax.set_ylabel("Total Jumlah Penyewaan")
+st.pyplot(fig)
+
+# **2. Jumlah Penyewaan Berdasarkan Hari dalam Seminggu**
+fig, ax = plt.subplots(figsize=(8, 5))
+sns.barplot(x='weekday', y='cnt', data=filtered_data, estimator=sum, palette="viridis", ax=ax)
+ax.set_title("Jumlah Penyewaan Sepeda Berdasarkan Hari dalam Seminggu")
+ax.set_xlabel("Hari dalam Seminggu (0 = Minggu, 6 = Sabtu)")
+ax.set_ylabel("Total Penyewaan")
+st.pyplot(fig)
 
 #  Scatter plot: Rata-rata Penyewaan Berdasarkan Faktor Cuaca
 st.header("Pengaruh Cuaca terhadap Penyewaan Sepeda🌞🚴‍♂️")
