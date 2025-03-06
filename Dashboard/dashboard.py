@@ -6,14 +6,14 @@ import matplotlib.pyplot as plt
 # Load data
 @st.cache_data
 def load_data():
-    data = pd.read_csv("D:/submission_analisis_data/Data/day.csv")  # Pastikan path sesuai
+    data = pd.read_csv("all_data.csv")  # Pastikan path sesuai
     data["dteday"] = pd.to_datetime(data["dteday"])
     return data
 
 data = load_data()
 
 # Sidebar: Filter Tanggal
-st.sidebar.image("D:/submission_analisis_data/Dashboard/logo.png", width=150)  # Tambahkan logo (opsional)
+st.sidebar.image("logo.png", width=150)  # Tambahkan logo (opsional)
 st.sidebar.header("Filter Rentang Waktu")
 start_date = st.sidebar.date_input("Start Date", data["dteday"].min())
 end_date = st.sidebar.date_input("End Date", data["dteday"].max())
