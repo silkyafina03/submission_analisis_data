@@ -13,6 +13,5 @@ pip install -r requirements.txt
 
 ## Run steamlit app
 ```
-cd "D:\submission_analisis_data\Dashboard"
-streamlit run dashboard.py
+streamlit run Dashboard/dashboard.py
 ```
