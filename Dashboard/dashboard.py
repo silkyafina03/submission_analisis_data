@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Load data
 @st.cache_data
 def load_data():
-    data = pd.read_csv("Data/day.csv")  # Pastikan path sesuai
+    data = pd.read_csv('Data/day.csv')  # Pastikan path sesuai
     data["dteday"] = pd.to_datetime(data["dteday"])
     return data
 
