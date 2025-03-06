@@ -1,3 +1,4 @@
+## Bike Sharing Dashboard 🚲
 ## Setup Environment - Shell/Terminal
 ```
 mkdir submission_analisis_data
